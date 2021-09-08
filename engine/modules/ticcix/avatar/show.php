@@ -4,9 +4,8 @@ if (!defined('DATALIFEENGINE'))
 	include ('engine/data/avatarconfig.php');
 if ( "" . $dleavatar_config['active'] . "" == "1") {
 
-$userName  = !empty($userName) ? $db->safesql(strip_tags(stripslashes($userName))) : false;
 $uiavatar  = array(
-	'userName' => $userName,
+	$userName  = $member_id['name'];
 	'color' => !empty($color) ? $color : preg_replace("/#/i", "", $dleavatar_config['color']),
 	'bgcolor' => !empty($bgcolor) ? $bgcolor : preg_replace("/#/i", "", $dleavatar_config['bgcolor']),
 	'size' => !empty($size) ? $size : "" . $dleavatar_config['width'] . "",
