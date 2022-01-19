@@ -5,7 +5,7 @@ if (!defined('DATALIFEENGINE'))
 if ( "" . $dleavatar_config['active'] . "" == "1") {
 
 $uiavatar  = array(
-	$userName  = $member_id['name'];
+	$userName  = $member_id['name'],
 	'color' => !empty($color) ? $color : preg_replace("/#/i", "", $dleavatar_config['color']),
 	'bgcolor' => !empty($bgcolor) ? $bgcolor : preg_replace("/#/i", "", $dleavatar_config['bgcolor']),
 	'size' => !empty($size) ? $size : "" . $dleavatar_config['width'] . "",
