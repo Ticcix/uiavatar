@@ -4,8 +4,8 @@
 	<description>Generate avatars with initials from names.</description>
 	<icon>engine/skins/images/avatar-ticcix.png</icon>
 	<version>1.0.1</version>
-	<dleversion>13</dleversion>
-	<versioncompare>greater</versioncompare>
+	<dleversion>14</dleversion>
+	<versioncompare>less</versioncompare>
 	<upgradeurl></upgradeurl>
 	<filedelete>0</filedelete>
 	<needplugin></needplugin>
