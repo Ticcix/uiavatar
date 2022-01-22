@@ -3,12 +3,12 @@
 	<name>UIAvatar</name>
 	<description>Generate avatars with initials from names.</description>
 	<icon>engine/skins/images/avatar-ticcix.png</icon>
-	<version>1.0.1</version>
-	<dleversion>14</dleversion>
-	<versioncompare>less</versioncompare>
+	<version>1.0.2</version>
+	<dleversion>13</dleversion>
+	<versioncompare>greater</versioncompare>
 	<upgradeurl></upgradeurl>
 	<filedelete>0</filedelete>
-	<needplugin></needplugin>
+	<needplugin>Ticcix Updates</needplugin>
 	<mnotice>1</mnotice>
 	<mysqlinstall><![CDATA[ALTER TABLE `{prefix}_users` ADD `color` varchar(40) NOT NULL;
 ALTER TABLE `{prefix}_users` ADD `bgcolor` varchar(40) NOT NULL;]]></mysqlinstall>
@@ -23,10 +23,11 @@ DELETE FROM `{prefix}_admin_sections` WHERE name = 'avatar';]]></mysqldelete>
 	<phpenable><![CDATA[]]></phpenable>
 	<phpdisable><![CDATA[]]></phpdisable>
 	<phpdelete><![CDATA[]]></phpdelete>
-	<notice><![CDATA[]]></notice>
+	<notice><![CDATA[Download and install the plugin!
+https://github.com/Ticcix/Ticcix-Updates]]></notice>
 	<file name="engine/modules/profile.php">
-		<operation action="after">
-			<searchcode><![CDATA[include_once (DLEPlugins::Check(ENGINE_DIR . '/classes/parse.class.php'));]]></searchcode>
+		<operation action="before">
+			<searchcode><![CDATA[$parse = new ParseFilter();]]></searchcode>
 			<replacecode><![CDATA[//Ticcix
 include_once (DLEPlugins::Check(ENGINE_DIR . '/modules/ticcix/avatar/avatar.php'));]]></replacecode>
 		</operation>
